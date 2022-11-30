@@ -1,8 +1,8 @@
 import { useEffect, useReducer } from "react";
-import { Status } from "../utils/constants";
+import { Status, Types } from "../utils/constants";
 import { Stock, GetStockResponse } from "../apis/stockPrice.api";
 
-export const ACTIONS: Status = {
+export const ACTIONS: Types = {
   SET_LOADING: "SET_LOADING",
   SET_ERROR: "SET_ERROR",
   SET_DATA: "SET_DATA",
