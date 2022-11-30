@@ -41,6 +41,7 @@ const useFetchData = (apiFn): State => {
       dispatch({ type: ACTIONS.SET_LOADING });
       try {
         const payload: GetStockResponse = await apiFn();
+        console.log(payload);
         dispatch({ type: ACTIONS.SET_DATA, payload });
       } catch (e) {
         console.error("In fetching data", e);
@@ -48,7 +49,11 @@ const useFetchData = (apiFn): State => {
       }
     };
 
-    fetchData();
+    const intervalId = setInterval(() => {
+      fetchData();
+    }, 2000);
+
+    return () => clearInterval(intervalId);
   }, [apiFn]);
 
   return state;
