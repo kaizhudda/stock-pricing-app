@@ -1,3 +1,6 @@
+# My Thoughts
+Created the base layout of the application, using Axios to fetch the stock-api every 2 seconds, with Context API to pass data across the application. The tricky bit here was to store the historical data everytime the API is called (every 2 seconds). So I haven't done this part, once this part is done the rest of the app should be pretty straight forward.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
